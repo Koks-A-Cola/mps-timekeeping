@@ -13,9 +13,6 @@ import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
-import jetbrains.mps.openapi.editor.style.Style;
-import jetbrains.mps.editor.runtime.style.StyleImpl;
-import jetbrains.mps.editor.runtime.style.StyleAttributes;
 
 /*package*/ class WorkInterval_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -42,7 +39,6 @@ import jetbrains.mps.editor.runtime.style.StyleAttributes;
     editorCell.setBig(true);
     editorCell.setCellContext(getCellFactory().getCellContext());
     editorCell.addEditorCell(createCollection_4sromj_a0());
-    editorCell.addEditorCell(createCollection_4sromj_b0());
     return editorCell;
   }
   private EditorCell createCollection_4sromj_a0() {
@@ -96,19 +92,6 @@ import jetbrains.mps.editor.runtime.style.StyleAttributes;
       EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
       return manager.createNodeRoleAttributeCell(attributeConcept, provider.getRoleAttributeKind(), editorCell);
     } else
-    return editorCell;
-  }
-  private EditorCell createCollection_4sromj_b0() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_4sromj_b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createComponent_4sromj_a1a());
-    return editorCell;
-  }
-  private EditorCell createComponent_4sromj_a1a() {
-    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "Timekeeping.editor.HorizontalLine");
     return editorCell;
   }
 }

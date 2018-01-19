@@ -53,7 +53,6 @@
   <node concept="1TIwiD" id="3Ql0dP_WSql">
     <property role="EcuMT" value="4437453958741722773" />
     <property role="TrG5h" value="MonthlyTimeRecord" />
-    <property role="34LRSv" value="month" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="3Ql0dP_WSqm" role="1TKVEl">
@@ -176,6 +175,53 @@
   <node concept="Az7Fb" id="3Ql0dP_WSs2">
     <property role="TrG5h" value="Time" />
     <property role="FLfZY" value="^([01]?\\d|2[0-3]):([0-5]?\\d)$" />
+  </node>
+  <node concept="1TIwiD" id="1h3k84IKhus">
+    <property role="EcuMT" value="1460099219963582364" />
+    <property role="TrG5h" value="IntlAlias" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1h3k84IKhuz" role="1TKVEi">
+      <property role="IQ2ns" value="1460099219963582371" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="keywords" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="1h3k84IKhut" resolve="LocalizedKeyword" />
+    </node>
+    <node concept="1TJgyj" id="1h3k84IKip4" role="1TKVEi">
+      <property role="IQ2ns" value="1460099219963586116" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="localizeableConcept" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1h3k84IKhut">
+    <property role="EcuMT" value="1460099219963582365" />
+    <property role="TrG5h" value="LocalizedKeyword" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="1h3k84IKhuu" role="1TKVEl">
+      <property role="IQ2nx" value="1460099219963582366" />
+      <property role="TrG5h" value="language" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="1h3k84IKhuw" role="1TKVEl">
+      <property role="IQ2nx" value="1460099219963582368" />
+      <property role="TrG5h" value="keyword" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1h3k84IKhuC">
+    <property role="EcuMT" value="1460099219963582376" />
+    <property role="TrG5h" value="Translation" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1h3k84IKhuD" role="1TKVEi">
+      <property role="IQ2ns" value="1460099219963582377" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="strings" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="1h3k84IKhus" resolve="IntlAlias" />
+    </node>
   </node>
 </model>
 

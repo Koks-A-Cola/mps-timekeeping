@@ -17,10 +17,10 @@ import java.awt.Color;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
 import jetbrains.mps.editor.runtime.style.Padding;
 import jetbrains.mps.editor.runtime.style.Measure;
-import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import jetbrains.mps.smodel.action.NodeFactoryManager;
@@ -72,18 +72,22 @@ import jetbrains.mps.editor.runtime.EditorCell_Empty;
     style.set(StyleAttributes.PADDING_BOTTOM, new Padding(1, Measure.SPACES));
     style.set(StyleAttributes.PADDING_TOP, new Padding(1, Measure.SPACES));
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_6ww6yi_a0a());
+    editorCell.addEditorCell(createComponent_6ww6yi_a0a());
     editorCell.addEditorCell(createProperty_6ww6yi_b0a());
     editorCell.addEditorCell(createConstant_6ww6yi_c0a());
     editorCell.addEditorCell(createCollection_6ww6yi_d0a());
     editorCell.addEditorCell(createEmpty_6ww6yi_e0a());
     return editorCell;
   }
-  private EditorCell createConstant_6ww6yi_a0a() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "day");
-    editorCell.setCellId("Constant_6ww6yi_a0a");
-    editorCell.setDefaultText("");
+  private EditorCell createComponent_6ww6yi_a0a() {
+    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "Timekeeping.editor.LocalizeableAlias");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_SIZE, _StyleParameter_QueryFunction_6ww6yi_a0a0a());
+    editorCell.getStyle().putAll(style);
     return editorCell;
+  }
+  private int _StyleParameter_QueryFunction_6ww6yi_a0a0a() {
+    return FSS.medium_large();
   }
   private EditorCell createProperty_6ww6yi_b0a() {
     CellProviderWithRole provider = new PropertyCellProvider(myNode, getEditorContext());

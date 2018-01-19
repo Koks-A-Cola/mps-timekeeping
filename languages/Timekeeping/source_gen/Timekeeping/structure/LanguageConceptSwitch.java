@@ -10,13 +10,19 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
   public static final int DailyTimeRecord = 0;
-  public static final int MonthlyTimeRecord = 1;
-  public static final int WorkInterval = 2;
+  public static final int IntlAlias = 1;
+  public static final int LocalizedKeyword = 2;
+  public static final int MonthlyTimeRecord = 3;
+  public static final int Translation = 4;
+  public static final int WorkInterval = 5;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L);
     builder.put(0x3d9500dd65f386f8L, DailyTimeRecord);
+    builder.put(0x144350812ec1179cL, IntlAlias);
+    builder.put(0x144350812ec1179dL, LocalizedKeyword);
     builder.put(0x3d9500dd65f38695L, MonthlyTimeRecord);
+    builder.put(0x144350812ec117a8L, Translation);
     builder.put(0x3d9500dd65f38701L, WorkInterval);
     myIndex = builder.seal();
   }
