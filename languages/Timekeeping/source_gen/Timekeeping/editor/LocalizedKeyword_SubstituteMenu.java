@@ -15,12 +15,12 @@ import jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase;
 import jetbrains.mps.smodel.SNodePointer;
 import jetbrains.mps.lang.editor.menus.substitute.ReferenceScopeSubstituteMenuPart;
 
-public class IntlAlias_SubstituteMenu extends SubstituteMenuBase {
+public class LocalizedKeyword_SubstituteMenu extends SubstituteMenuBase {
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new IntlAlias_SubstituteMenu.SMP_ReferenceScope_2gtcia_a(), MetaAdapterFactory.getConcept(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL, "Timekeeping.structure.IntlAlias")));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new LocalizedKeyword_SubstituteMenu.SMP_ReferenceScope_qvif2d_a(), MetaAdapterFactory.getConcept(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179dL, "Timekeeping.structure.LocalizedKeyword")));
     return result;
   }
 
@@ -28,7 +28,7 @@ public class IntlAlias_SubstituteMenu extends SubstituteMenuBase {
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for IntlAlias. Generated from implicit smart reference attribute.", new SNodePointer("r:069c894f-154c-4238-a338-f810181c3225(Timekeeping.structure)", "1460099219963582364")));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for LocalizedKeyword. Generated from implicit smart reference attribute.", new SNodePointer("r:069c894f-154c-4238-a338-f810181c3225(Timekeeping.structure)", "1460099219963582365")));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -37,10 +37,10 @@ public class IntlAlias_SubstituteMenu extends SubstituteMenuBase {
   }
 
 
-  public static class SMP_ReferenceScope_2gtcia_a extends ReferenceScopeSubstituteMenuPart {
+  public static class SMP_ReferenceScope_qvif2d_a extends ReferenceScopeSubstituteMenuPart {
 
-    public SMP_ReferenceScope_2gtcia_a() {
-      super(MetaAdapterFactory.getConcept(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL, "Timekeeping.structure.IntlAlias"), MetaAdapterFactory.getReferenceLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL, 0x144350812ec12644L, "conceptToLocalize"));
+    public SMP_ReferenceScope_qvif2d_a() {
+      super(MetaAdapterFactory.getConcept(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179dL, "Timekeeping.structure.LocalizedKeyword"), MetaAdapterFactory.getReferenceLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179dL, 0x3581a114cbed7a78L, "language"));
     }
     @NotNull
     @Override

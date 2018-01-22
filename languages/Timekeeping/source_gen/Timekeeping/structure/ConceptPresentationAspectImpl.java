@@ -11,6 +11,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_DailyTimeRecord;
   private ConceptPresentation props_IntlAlias;
+  private ConceptPresentation props_IntlLanguage;
   private ConceptPresentation props_LocalizedKeyword;
   private ConceptPresentation props_MonthlyTimeRecord;
   private ConceptPresentation props_Translation;
@@ -31,21 +32,28 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.IntlAlias:
         if (props_IntlAlias == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL, 0x144350812ec12644L, "localizeableConcept", "", "");
+          cpb.presentationByReference(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL, 0x144350812ec12644L, "conceptToLocalize", "", "");
           props_IntlAlias = cpb.create();
         }
         return props_IntlAlias;
+      case LanguageConceptSwitch.IntlLanguage:
+        if (props_IntlLanguage == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_IntlLanguage = cpb.create();
+        }
+        return props_IntlLanguage;
       case LanguageConceptSwitch.LocalizedKeyword:
         if (props_LocalizedKeyword == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("LocalizedKeyword");
+          cpb.presentationByReference(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179dL, 0x3581a114cbed7a78L, "language", "", "");
           props_LocalizedKeyword = cpb.create();
         }
         return props_LocalizedKeyword;
       case LanguageConceptSwitch.MonthlyTimeRecord:
         if (props_MonthlyTimeRecord == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("MonthlyTimeRecord");
+          cpb.rawPresentation("month");
           props_MonthlyTimeRecord = cpb.create();
         }
         return props_MonthlyTimeRecord;
