@@ -11,6 +11,9 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Collection;
 import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
+import jetbrains.mps.lang.smodel.ConceptSwitchIndex;
+import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
+import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class IntentionsDescriptor extends AbstractIntentionAspectDescriptor {
   private static final IntentionFactory[] EMPTY_ARRAY = new IntentionFactory[0];
@@ -27,6 +30,17 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
 
     IntentionFactory[] intentions = EMPTY_ARRAY;
     SAbstractConcept cncpt_d0f = concept;
+    switch (index_hphjzv_d0f.index(cncpt_d0f)) {
+      case 0:
+        if (true) {
+          // Concept: Translation 
+          intentions = new IntentionFactory[2];
+          intentions[0] = new AddNewLanguage_Intention();
+          intentions[1] = new AddNewAlias_Intention();
+        }
+        break;
+      default:
+    }
     myCached.put(concept, intentions);
     return Arrays.asList(intentions);
   }
@@ -34,7 +48,10 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
   @NotNull
   @Override
   public Collection<IntentionFactory> getAllIntentions() {
-    IntentionFactory[] rv = new IntentionFactory[0];
+    IntentionFactory[] rv = new IntentionFactory[2];
+    rv[0] = new AddNewLanguage_Intention();
+    rv[1] = new AddNewAlias_Intention();
     return Arrays.asList(rv);
   }
+  private static final ConceptSwitchIndex index_hphjzv_d0f = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec117a8L)).seal();
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <root>
+    <file name="ActionAspectDescriptorImpl.java">
+      <unit at="13,0,36,0" name="Timekeeping.actions.ActionAspectDescriptorImpl" />
+    </file>
+    <file name="QueriesGenerated.java">
+      <unit at="6,0,8,0" name="Timekeeping.actions.QueriesGenerated" />
+    </file>
+  </root>
+  <root nodeRef="r:877c4e44-1796-447e-a717-a9b212cfeee2(Timekeeping.actions)/874080446224723535">
+    <file name="MyFactory.java">
+      <node id="874080446224372492" at="19,37,20,198" concept="2" />
+      <node id="874080446224374277" at="20,198,21,190" concept="0" />
+      <node id="874080446224378899" at="21,190,22,223" concept="0" />
+      <node id="874080446224958555" at="30,37,31,198" concept="2" />
+      <node id="874080446224960902" at="31,198,32,185" concept="0" />
+      <node id="874080446224965933" at="32,185,33,228" concept="0" />
+      <node id="874080446224362654" at="19,0,24,0" concept="1" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="874080446224957467" at="30,0,35,0" concept="1" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="874080446224334990" at="17,97,24,9" concept="0" />
+      <node id="874080446224912345" at="28,97,35,9" concept="0" />
+      <node id="874080446224723536" at="17,0,26,0" concept="1" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <node id="874080446224899657" at="28,0,37,0" concept="1" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <scope id="874080446224362655" at="19,37,22,223">
+        <var name="newKeyword" id="874080446224372495" />
+      </scope>
+      <scope id="874080446224957468" at="30,37,33,228">
+        <var name="newKeyword" id="874080446224958558" />
+      </scope>
+      <scope id="874080446224362654" at="19,0,24,0">
+        <var name="it" id="874080446224362654" />
+      </scope>
+      <scope id="874080446224957467" at="30,0,35,0">
+        <var name="it" id="874080446224957467" />
+      </scope>
+      <scope id="874080446224723536" at="17,97,24,9" />
+      <scope id="874080446224899657" at="28,97,35,9" />
+      <scope id="874080446224723536" at="17,0,26,0">
+        <var name="enclosingNode" id="874080446224723536" />
+        <var name="model" id="874080446224723536" />
+        <var name="newNode" id="874080446224723536" />
+        <var name="sampleNode" id="874080446224723536" />
+      </scope>
+      <scope id="874080446224899657" at="28,0,37,0">
+        <var name="enclosingNode" id="874080446224899657" />
+        <var name="model" id="874080446224899657" />
+        <var name="newNode" id="874080446224899657" />
+        <var name="sampleNode" id="874080446224899657" />
+      </scope>
+      <unit id="874080446224362654" at="18,397,24,7" name="Timekeeping.actions.MyFactory$NodeFactory_874080446224723536$1" />
+      <unit id="874080446224957467" at="29,399,35,7" name="Timekeeping.actions.MyFactory$NodeFactory_874080446224899657$1" />
+      <unit id="874080446224723536" at="16,0,27,0" name="Timekeeping.actions.MyFactory$NodeFactory_874080446224723536" />
+      <unit id="874080446224899657" at="27,0,38,0" name="Timekeeping.actions.MyFactory$NodeFactory_874080446224899657" />
+      <unit id="874080446224723535" at="15,0,39,0" name="Timekeeping.actions.MyFactory" />
+    </file>
+  </root>
+</debug-info>
+

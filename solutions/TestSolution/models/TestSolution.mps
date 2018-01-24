@@ -51,7 +51,7 @@
       </node>
       <node concept="1opCvs" id="KSl_hldWj" role="1opCvu" />
       <node concept="1opCvs" id="73i$h$gqzs8" role="1opCvu" />
-      <node concept="1opCvs" id="73i$h$gqFpl" role="1opCvu" />
+      <node concept="1opCvs" id="KxmSzAjdua" role="1opCvu" />
     </node>
     <node concept="1opCo_" id="3JNW8yYehPL" role="1opCoy">
       <property role="1opCoA" value="18" />
@@ -76,7 +76,22 @@
         <property role="Uw$sx" value="monthHh" />
         <ref role="3YrdHG" node="3m1ChjbW1v1" resolve="en" />
       </node>
-      <node concept="Uw$ss" id="7O8Lw0GKwHc" role="Uw$sy" />
+      <node concept="Uw$ss" id="KxmSzAjdtZ" role="Uw$sy">
+        <property role="Uw$sx" value="Mesjac" />
+        <ref role="3YrdHG" node="KxmSzAjdtY" resolve="ru" />
+      </node>
+      <node concept="Uw$ss" id="KxmSzAkb95" role="Uw$sy">
+        <property role="Uw$sx" value="Monatli" />
+        <ref role="3YrdHG" node="KxmSzAkb94" resolve="ch" />
+      </node>
+      <node concept="Uw$ss" id="KxmSzAkb9k" role="Uw$sy">
+        <property role="Uw$sx" value="Los Monatos" />
+        <ref role="3YrdHG" node="KxmSzAkb9j" resolve="es" />
+      </node>
+      <node concept="Uw$ss" id="KxmSzAmpJ2" role="Uw$sy">
+        <property role="Uw$sx" value="Langos1" />
+        <ref role="3YrdHG" node="KxmSzAmpJ1" resolve="hu" />
+      </node>
     </node>
     <node concept="Uw$st" id="3yVSeSuyOFa" role="Uw$sC">
       <ref role="UwBr5" node="3Ql0dP_XdMy" />
@@ -88,14 +103,57 @@
         <property role="Uw$sx" value="dayYy" />
         <ref role="3YrdHG" node="3m1ChjbW1v1" resolve="en" />
       </node>
-      <node concept="Uw$ss" id="7O8Lw0GKwHd" role="Uw$sy" />
+      <node concept="Uw$ss" id="KxmSzAjdu0" role="Uw$sy">
+        <property role="Uw$sx" value="Den" />
+        <ref role="3YrdHG" node="KxmSzAjdtY" resolve="ru" />
+      </node>
+      <node concept="Uw$ss" id="KxmSzAkb96" role="Uw$sy">
+        <property role="Uw$sx" value="Tägli" />
+        <ref role="3YrdHG" node="KxmSzAkb94" resolve="ch" />
+      </node>
+      <node concept="Uw$ss" id="KxmSzAkb9l" role="Uw$sy">
+        <property role="Uw$sx" value="Los Tagos" />
+        <ref role="3YrdHG" node="KxmSzAkb9j" resolve="es" />
+      </node>
+      <node concept="Uw$ss" id="KxmSzAmpJ3" role="Uw$sy">
+        <property role="Uw$sx" value="Langos2" />
+        <ref role="3YrdHG" node="KxmSzAmpJ1" resolve="hu" />
+      </node>
     </node>
-    <node concept="Uw$st" id="7O8Lw0GKwGB" role="Uw$sC">
-      <node concept="Uw$ss" id="7O8Lw0GKwGC" role="Uw$sy" />
-      <node concept="Uw$ss" id="7O8Lw0GKwGD" role="Uw$sy" />
-      <node concept="Uw$ss" id="7O8Lw0GKwHe" role="Uw$sy" />
+    <node concept="3YqTXJ" id="KxmSzAjdtY" role="3YqRnP">
+      <property role="TrG5h" value="ru" />
     </node>
-    <node concept="3YqTXJ" id="7O8Lw0GKwHb" role="3YqRnP" />
+    <node concept="3YqTXJ" id="KxmSzAkb94" role="3YqRnP">
+      <property role="TrG5h" value="ch" />
+    </node>
+    <node concept="3YqTXJ" id="KxmSzAkb9j" role="3YqRnP">
+      <property role="TrG5h" value="es" />
+    </node>
+    <node concept="3YqTXJ" id="KxmSzAmpJ1" role="3YqRnP">
+      <property role="TrG5h" value="hu" />
+    </node>
+    <node concept="Uw$st" id="KxmSzAndj_" role="Uw$sC">
+      <ref role="UwBr5" node="3CcsRtNsWTr" />
+      <node concept="Uw$ss" id="KxmSzAndjA" role="Uw$sy">
+        <property role="Uw$sx" value="Intervall" />
+        <ref role="3YrdHG" node="3m1ChjbW1uZ" resolve="de" />
+      </node>
+      <node concept="Uw$ss" id="KxmSzAndjB" role="Uw$sy">
+        <ref role="3YrdHG" node="3m1ChjbW1v1" resolve="en" />
+      </node>
+      <node concept="Uw$ss" id="KxmSzAndjC" role="Uw$sy">
+        <ref role="3YrdHG" node="KxmSzAjdtY" resolve="ru" />
+      </node>
+      <node concept="Uw$ss" id="KxmSzAndjD" role="Uw$sy">
+        <ref role="3YrdHG" node="KxmSzAkb94" resolve="ch" />
+      </node>
+      <node concept="Uw$ss" id="KxmSzAndjE" role="Uw$sy">
+        <ref role="3YrdHG" node="KxmSzAkb9j" resolve="es" />
+      </node>
+      <node concept="Uw$ss" id="KxmSzAndjF" role="Uw$sy">
+        <ref role="3YrdHG" node="KxmSzAmpJ1" resolve="hu" />
+      </node>
+    </node>
   </node>
 </model>
 

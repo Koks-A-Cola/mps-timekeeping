@@ -1,8 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="IntentionsDescriptor.java">
-      <unit at="15,0,41,0" name="Timekeeping.intentions.IntentionsDescriptor" />
+      <unit at="18,0,58,0" name="Timekeeping.intentions.IntentionsDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:1bdc2274-f42b-47f5-be54-5cee8f2adf43(Timekeeping.intentions)/874080446224315119">
+    <file name="AddNewLanguage_Intention.java">
+      <node id="874080446224315119" at="20,0,21,0" concept="2" trace="myCachedExecutable" />
+      <node id="874080446224315119" at="21,37,22,135" concept="6" />
+      <node id="874080446224315119" at="25,35,26,28" concept="5" />
+      <node id="874080446224315119" at="29,84,30,16" concept="5" />
+      <node id="874080446224315119" at="33,35,34,17" concept="5" />
+      <node id="874080446224315119" at="37,37,38,130" concept="1" />
+      <node id="874080446224315119" at="39,5,40,30" concept="5" />
+      <node id="874080446224315675" at="46,87,47,32" concept="5" />
+      <node id="874080446224318413" at="50,78,51,357" concept="1" />
+      <node id="874080446224315119" at="54,48,55,43" concept="5" />
+      <node id="874080446224315119" at="43,0,45,0" concept="0" trace="IntentionImplementation#()V" />
+      <node id="874080446224315119" at="21,0,24,0" concept="0" trace="AddNewLanguage_Intention#()V" />
+      <node id="874080446224315119" at="36,99,39,5" concept="3" />
+      <node id="874080446224315119" at="24,0,28,0" concept="4" trace="getPresentation#()Ljava/lang/String;" />
+      <node id="874080446224315119" at="28,0,32,0" concept="4" trace="isApplicable#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Z" />
+      <node id="874080446224315119" at="32,0,36,0" concept="4" trace="isSurroundWith#()Z" />
+      <node id="874080446224315119" at="45,0,49,0" concept="4" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Ljava/lang/String;" />
+      <node id="874080446224315119" at="49,0,53,0" concept="4" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
+      <node id="874080446224315119" at="53,0,57,0" concept="4" trace="getDescriptor#()Ljetbrains/mps/openapi/intentions/IntentionDescriptor;" />
+      <node id="874080446224315119" at="36,0,42,0" concept="4" trace="instances#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Ljava/util/Collection;" />
+      <scope id="874080446224315119" at="43,38,43,38" />
+      <scope id="874080446224315119" at="21,37,22,135" />
+      <scope id="874080446224315119" at="25,35,26,28" />
+      <scope id="874080446224315119" at="29,84,30,16" />
+      <scope id="874080446224315119" at="33,35,34,17" />
+      <scope id="874080446224315119" at="37,37,38,130" />
+      <scope id="874080446224315121" at="46,87,47,32" />
+      <scope id="874080446224315123" at="50,78,51,357" />
+      <scope id="874080446224315119" at="54,48,55,43" />
+      <scope id="874080446224315119" at="43,0,45,0" />
+      <scope id="874080446224315119" at="21,0,24,0" />
+      <scope id="874080446224315119" at="24,0,28,0" />
+      <scope id="874080446224315119" at="28,0,32,0">
+        <var name="editorContext" id="874080446224315119" />
+        <var name="node" id="874080446224315119" />
+      </scope>
+      <scope id="874080446224315119" at="32,0,36,0" />
+      <scope id="874080446224315119" at="36,99,40,30" />
+      <scope id="874080446224315119" at="45,0,49,0">
+        <var name="editorContext" id="874080446224315119" />
+        <var name="node" id="874080446224315119" />
+      </scope>
+      <scope id="874080446224315119" at="49,0,53,0">
+        <var name="editorContext" id="874080446224315119" />
+        <var name="node" id="874080446224315119" />
+      </scope>
+      <scope id="874080446224315119" at="53,0,57,0" />
+      <scope id="874080446224315119" at="36,0,42,0">
+        <var name="context" id="874080446224315119" />
+        <var name="node" id="874080446224315119" />
+      </scope>
+      <unit id="874080446224315119" at="42,0,58,0" name="Timekeeping.intentions.AddNewLanguage_Intention$IntentionImplementation" />
+      <unit id="874080446224315119" at="19,0,59,0" name="Timekeeping.intentions.AddNewLanguage_Intention" />
+    </file>
+  </root>
+  <root nodeRef="r:1bdc2274-f42b-47f5-be54-5cee8f2adf43(Timekeeping.intentions)/874080446225007865">
+    <file name="AddNewAlias_Intention.java">
+      <node id="874080446225007865" at="20,0,21,0" concept="2" trace="myCachedExecutable" />
+      <node id="874080446225007865" at="21,34,22,135" concept="6" />
+      <node id="874080446225007865" at="25,35,26,25" concept="5" />
+      <node id="874080446225007865" at="29,84,30,16" concept="5" />
+      <node id="874080446225007865" at="33,35,34,17" concept="5" />
+      <node id="874080446225007865" at="37,37,38,127" concept="1" />
+      <node id="874080446225007865" at="39,5,40,30" concept="5" />
+      <node id="874080446225008453" at="46,87,47,29" concept="5" />
+      <node id="874080446225010639" at="50,78,51,352" concept="1" />
+      <node id="874080446225007865" at="54,48,55,40" concept="5" />
+      <node id="874080446225007865" at="43,0,45,0" concept="0" trace="IntentionImplementation#()V" />
+      <node id="874080446225007865" at="21,0,24,0" concept="0" trace="AddNewAlias_Intention#()V" />
+      <node id="874080446225007865" at="36,99,39,5" concept="3" />
+      <node id="874080446225007865" at="24,0,28,0" concept="4" trace="getPresentation#()Ljava/lang/String;" />
+      <node id="874080446225007865" at="28,0,32,0" concept="4" trace="isApplicable#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Z" />
+      <node id="874080446225007865" at="32,0,36,0" concept="4" trace="isSurroundWith#()Z" />
+      <node id="874080446225007865" at="45,0,49,0" concept="4" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Ljava/lang/String;" />
+      <node id="874080446225007865" at="49,0,53,0" concept="4" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
+      <node id="874080446225007865" at="53,0,57,0" concept="4" trace="getDescriptor#()Ljetbrains/mps/openapi/intentions/IntentionDescriptor;" />
+      <node id="874080446225007865" at="36,0,42,0" concept="4" trace="instances#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Ljava/util/Collection;" />
+      <scope id="874080446225007865" at="43,38,43,38" />
+      <scope id="874080446225007865" at="21,34,22,135" />
+      <scope id="874080446225007865" at="25,35,26,25" />
+      <scope id="874080446225007865" at="29,84,30,16" />
+      <scope id="874080446225007865" at="33,35,34,17" />
+      <scope id="874080446225007865" at="37,37,38,127" />
+      <scope id="874080446225007867" at="46,87,47,29" />
+      <scope id="874080446225007869" at="50,78,51,352" />
+      <scope id="874080446225007865" at="54,48,55,40" />
+      <scope id="874080446225007865" at="43,0,45,0" />
+      <scope id="874080446225007865" at="21,0,24,0" />
+      <scope id="874080446225007865" at="24,0,28,0" />
+      <scope id="874080446225007865" at="28,0,32,0">
+        <var name="editorContext" id="874080446225007865" />
+        <var name="node" id="874080446225007865" />
+      </scope>
+      <scope id="874080446225007865" at="32,0,36,0" />
+      <scope id="874080446225007865" at="36,99,40,30" />
+      <scope id="874080446225007865" at="45,0,49,0">
+        <var name="editorContext" id="874080446225007865" />
+        <var name="node" id="874080446225007865" />
+      </scope>
+      <scope id="874080446225007865" at="49,0,53,0">
+        <var name="editorContext" id="874080446225007865" />
+        <var name="node" id="874080446225007865" />
+      </scope>
+      <scope id="874080446225007865" at="53,0,57,0" />
+      <scope id="874080446225007865" at="36,0,42,0">
+        <var name="context" id="874080446225007865" />
+        <var name="node" id="874080446225007865" />
+      </scope>
+      <unit id="874080446225007865" at="42,0,58,0" name="Timekeeping.intentions.AddNewAlias_Intention$IntentionImplementation" />
+      <unit id="874080446225007865" at="19,0,59,0" name="Timekeeping.intentions.AddNewAlias_Intention" />
     </file>
   </root>
 </debug-info>

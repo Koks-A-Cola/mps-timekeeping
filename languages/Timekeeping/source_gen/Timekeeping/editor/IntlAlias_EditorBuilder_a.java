@@ -45,7 +45,6 @@ import jetbrains.mps.nodeEditor.EditorManager;
     editorCell.setBig(true);
     editorCell.setCellContext(getCellFactory().getCellContext());
     editorCell.addEditorCell(createCollection_t6f0l8_a0());
-    editorCell.addEditorCell(createCollection_t6f0l8_b0());
     return editorCell;
   }
   private EditorCell createCollection_t6f0l8_a0() {
@@ -121,13 +120,5 @@ import jetbrains.mps.nodeEditor.EditorManager;
       EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "jetbrains.mps.lang.core.editor.alias");
       return editorCell;
     }
-  }
-  private EditorCell createCollection_t6f0l8_b0() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
-    editorCell.setCellId("Collection_t6f0l8_b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    editorCell.getStyle().putAll(style);
-    return editorCell;
   }
 }
