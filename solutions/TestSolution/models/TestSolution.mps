@@ -4,7 +4,10 @@
   <languages>
     <use id="d3ca43b8-01a7-4083-ba4e-9769ab8f1643" name="Timekeeping" version="0" />
   </languages>
-  <imports />
+  <imports>
+    <import index="vbi9" ref="d3ca43b8-01a7-4083-ba4e-9769ab8f1643/i:f010101(Timekeeping/Timekeeping@descriptor)" />
+    <import index="ih4y" ref="r:069c894f-154c-4238-a338-f810181c3225(Timekeeping.structure)" implicit="true" />
+  </imports>
   <registry>
     <language id="d3ca43b8-01a7-4083-ba4e-9769ab8f1643" name="Timekeeping">
       <concept id="1460099219963582365" name="Timekeeping.structure.LocalizedKeyword" flags="ng" index="Uw$ss">
@@ -16,6 +19,7 @@
         <child id="1460099219963582371" name="keywords" index="Uw$sy" />
       </concept>
       <concept id="1460099219963582376" name="Timekeeping.structure.Translation" flags="ng" index="Uw$sD">
+        <reference id="8629236578592277044" name="selectedLanguage" index="2y3vr6" />
         <child id="1460099219963582377" name="strings" index="Uw$sC" />
         <child id="3855539866698437857" name="languages" index="3YqRnP" />
       </concept>
@@ -51,7 +55,7 @@
       </node>
       <node concept="1opCvs" id="KSl_hldWj" role="1opCvu" />
       <node concept="1opCvs" id="73i$h$gqzs8" role="1opCvu" />
-      <node concept="1opCvs" id="73i$h$gqFpl" role="1opCvu" />
+      <node concept="1opCvs" id="KxmSzAjdua" role="1opCvu" />
     </node>
     <node concept="1opCo_" id="3JNW8yYehPL" role="1opCoy">
       <property role="1opCoA" value="18" />
@@ -60,6 +64,7 @@
     </node>
   </node>
   <node concept="Uw$sD" id="1h3k84IKioU">
+    <ref role="2y3vr6" node="7v1dfblQiPI" resolve="es" />
     <node concept="3YqTXJ" id="3m1ChjbW1uZ" role="3YqRnP">
       <property role="TrG5h" value="de" />
     </node>
@@ -67,7 +72,7 @@
       <property role="TrG5h" value="en" />
     </node>
     <node concept="Uw$st" id="1h3k84IKioV" role="Uw$sC">
-      <ref role="UwBr5" node="3Ql0dP_XdMx" />
+      <ref role="UwBr5" to="ih4y:3Ql0dP_WSql" resolve="MonthlyTimeRecord" />
       <node concept="Uw$ss" id="3m1ChjbW1v4" role="Uw$sy">
         <property role="Uw$sx" value="Monat" />
         <ref role="3YrdHG" node="3m1ChjbW1uZ" resolve="de" />
@@ -76,26 +81,40 @@
         <property role="Uw$sx" value="monthHh" />
         <ref role="3YrdHG" node="3m1ChjbW1v1" resolve="en" />
       </node>
-      <node concept="Uw$ss" id="7O8Lw0GKwHc" role="Uw$sy" />
+      <node concept="Uw$ss" id="KxmSzAjdtZ" role="Uw$sy">
+        <property role="Uw$sx" value="Mesjac" />
+        <ref role="3YrdHG" node="KxmSzAjdtY" resolve="ru" />
+      </node>
+      <node concept="Uw$ss" id="7v1dfblQiPJ" role="Uw$sy">
+        <property role="Uw$sx" value="Los Monatos" />
+        <ref role="3YrdHG" node="7v1dfblQiPI" resolve="es" />
+      </node>
     </node>
-    <node concept="Uw$st" id="3yVSeSuyOFa" role="Uw$sC">
-      <ref role="UwBr5" node="3Ql0dP_XdMy" />
-      <node concept="Uw$ss" id="3m1ChjbW1va" role="Uw$sy">
+    <node concept="3YqTXJ" id="KxmSzAjdtY" role="3YqRnP">
+      <property role="TrG5h" value="ru" />
+    </node>
+    <node concept="Uw$st" id="7v1dfblOR44" role="Uw$sC">
+      <ref role="UwBr5" to="ih4y:3Ql0dP_WSrS" resolve="DailyTimeRecord" />
+      <node concept="Uw$ss" id="7v1dfblOR45" role="Uw$sy">
         <property role="Uw$sx" value="Tag" />
         <ref role="3YrdHG" node="3m1ChjbW1uZ" resolve="de" />
       </node>
-      <node concept="Uw$ss" id="3m1ChjbW1vc" role="Uw$sy">
+      <node concept="Uw$ss" id="7v1dfblOR46" role="Uw$sy">
         <property role="Uw$sx" value="dayYy" />
         <ref role="3YrdHG" node="3m1ChjbW1v1" resolve="en" />
       </node>
-      <node concept="Uw$ss" id="7O8Lw0GKwHd" role="Uw$sy" />
+      <node concept="Uw$ss" id="7v1dfblOR47" role="Uw$sy">
+        <property role="Uw$sx" value="Den" />
+        <ref role="3YrdHG" node="KxmSzAjdtY" resolve="ru" />
+      </node>
+      <node concept="Uw$ss" id="7v1dfblQiPK" role="Uw$sy">
+        <property role="Uw$sx" value="Los Tagos" />
+        <ref role="3YrdHG" node="7v1dfblQiPI" resolve="es" />
+      </node>
     </node>
-    <node concept="Uw$st" id="7O8Lw0GKwGB" role="Uw$sC">
-      <node concept="Uw$ss" id="7O8Lw0GKwGC" role="Uw$sy" />
-      <node concept="Uw$ss" id="7O8Lw0GKwGD" role="Uw$sy" />
-      <node concept="Uw$ss" id="7O8Lw0GKwHe" role="Uw$sy" />
+    <node concept="3YqTXJ" id="7v1dfblQiPI" role="3YqRnP">
+      <property role="TrG5h" value="es" />
     </node>
-    <node concept="3YqTXJ" id="7O8Lw0GKwHb" role="3YqRnP" />
   </node>
 </model>
 
