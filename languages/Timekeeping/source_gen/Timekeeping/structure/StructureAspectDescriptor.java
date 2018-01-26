@@ -60,6 +60,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForDailyTimeRecord() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Timekeeping", "DailyTimeRecord", 0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x3d9500dd65f386f8L);
     b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:069c894f-154c-4238-a338-f810181c3225(Timekeeping.structure)/4437453958741722872");
     b.prop("day", 0x3d9500dd65f386fbL, "4437453958741722875");
     b.aggregate("intervals", 0x3d9500dd65f38703L).target(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x3d9500dd65f38701L).optional(true).ordered(true).multiple(true).origin("4437453958741722883").done();
@@ -70,8 +71,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Timekeeping", "IntlAlias", 0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL);
     b.class_(false, false, false);
     b.origin("r:069c894f-154c-4238-a338-f810181c3225(Timekeeping.structure)/1460099219963582364");
-    b.associate("conceptToLocalize", 0x144350812ec12644L).target(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL).optional(false).origin("1460099219963586116").done();
+    b.associate("conceptToLocalize", 0x144350812ec12644L).target(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979ba0450L).optional(false).origin("1460099219963586116").done();
     b.aggregate("keywords", 0x144350812ec117a3L).target(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179dL).optional(true).ordered(true).multiple(true).origin("1460099219963582371").done();
+    b.alias("intl_alias");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIntlLanguage() {
@@ -103,8 +105,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Timekeeping", "Translation", 0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec117a8L);
     b.class_(false, false, true);
     b.origin("r:069c894f-154c-4238-a338-f810181c3225(Timekeeping.structure)/1460099219963582376");
+    b.associate("selectedLanguage", 0x77c134f2d5ccc234L).target(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x3581a114cbea3e7bL).optional(false).origin("8629236578592277044").done();
     b.aggregate("languages", 0x3581a114cbead4e1L).target(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x3581a114cbea3e7bL).optional(true).ordered(true).multiple(true).origin("3855539866698437857").done();
     b.aggregate("strings", 0x144350812ec117a9L).target(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL).optional(true).ordered(true).multiple(true).origin("1460099219963582377").done();
+    b.alias("translation");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForWorkInterval() {

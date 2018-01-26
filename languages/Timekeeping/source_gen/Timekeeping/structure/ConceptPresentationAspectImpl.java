@@ -25,14 +25,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.DailyTimeRecord:
         if (props_DailyTimeRecord == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("day");
+          cpb.presentationByName();
           props_DailyTimeRecord = cpb.create();
         }
         return props_DailyTimeRecord;
       case LanguageConceptSwitch.IntlAlias:
         if (props_IntlAlias == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL, 0x144350812ec12644L, "conceptToLocalize", "", "");
+          cpb.rawPresentation("intl_alias");
           props_IntlAlias = cpb.create();
         }
         return props_IntlAlias;
@@ -60,7 +60,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Translation:
         if (props_Translation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Translation");
+          cpb.rawPresentation("translation");
           props_Translation = cpb.create();
         }
         return props_Translation;

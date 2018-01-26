@@ -19,6 +19,13 @@ import jetbrains.mps.lang.editor.cellProviders.RefCellCellProvider;
 import jetbrains.mps.util.Computable;
 import jetbrains.mps.editor.runtime.impl.CellUtil;
 import jetbrains.mps.nodeEditor.EditorManager;
+import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Component;
+import javax.swing.JComponent;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 
 /*package*/ class IntlAlias_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -55,6 +62,7 @@ import jetbrains.mps.nodeEditor.EditorManager;
     editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createConstant_t6f0l8_a0a());
     editorCell.addEditorCell(createRefCell_t6f0l8_b0a());
+    editorCell.addEditorCell(createJComponent_t6f0l8_c0a());
     return editorCell;
   }
   private EditorCell createConstant_t6f0l8_a0a() {
@@ -75,7 +83,7 @@ import jetbrains.mps.nodeEditor.EditorManager;
         }, effectiveNode, "conceptToLocalize");
         CellUtil.setupIDeprecatableStyles(effectiveNode, cell);
         setSemanticNodeToCells(cell, myNode);
-        installDeleteActions_notnull_smartReference(cell);
+        installDeleteActions_notnull(cell);
         return cell;
       }
     };
@@ -107,7 +115,7 @@ import jetbrains.mps.nodeEditor.EditorManager;
     }
 
     /*package*/ EditorCell createCell() {
-      return createComponent_t6f0l8_a0b0a();
+      return createProperty_t6f0l8_a0b0a();
     }
 
     @NotNull
@@ -116,9 +124,39 @@ import jetbrains.mps.nodeEditor.EditorManager;
       return myNode;
     }
 
-    private EditorCell createComponent_t6f0l8_a0b0a() {
-      EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "jetbrains.mps.lang.core.editor.alias");
+    private EditorCell createProperty_t6f0l8_a0b0a() {
+      CellProviderWithRole provider = new PropertyCellProvider(myNode, getEditorContext());
+      provider.setRole("name");
+      provider.setNoTargetText("<no name>");
+      provider.setReadOnly(true);
+      EditorCell editorCell;
+      editorCell = provider.createEditorCell(getEditorContext());
+      editorCell.setCellId("property_name");
+      editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
+      SNode attributeConcept = provider.getRoleAttribute();
+      if (attributeConcept != null) {
+        EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
+        return manager.createNodeRoleAttributeCell(attributeConcept, provider.getRoleAttributeKind(), editorCell);
+      } else
       return editorCell;
     }
+  }
+  private EditorCell createJComponent_t6f0l8_c0a() {
+    EditorCell editorCell = EditorCell_Component.createComponentCell(getEditorContext(), myNode, _QueryFunction_JComponent_t6f0l8_a2a0(), "_t6f0l8_c0a");
+    editorCell.setCellId("JComponent_t6f0l8_c0a");
+    return editorCell;
+  }
+  private JComponent _QueryFunction_JComponent_t6f0l8_a2a0() {
+    JButton button = new JButton("Löschen");
+    button.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent p0) {
+        getEditorContext().getRepository().getModelAccess().executeCommand(new Runnable() {
+          public void run() {
+            SNodeOperations.deleteNode(myNode);
+          }
+        });
+      }
+    });
+    return button;
   }
 }

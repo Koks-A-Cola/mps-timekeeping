@@ -8,6 +8,7 @@
   <imports>
     <import index="dxuu" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing(JDK/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="tpce" ref="r:00000000-0000-4000-0000-011c89590292(jetbrains.mps.lang.structure.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -151,6 +152,9 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="3Ql0dP_WSs1" resolve="WorkInterval" />
     </node>
+    <node concept="PrWs8" id="7v1dfblLSSF" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
   <node concept="Az7Fb" id="3Ql0dP_WSrU">
     <property role="TrG5h" value="Day" />
@@ -184,6 +188,7 @@
   <node concept="1TIwiD" id="1h3k84IKhus">
     <property role="EcuMT" value="1460099219963582364" />
     <property role="TrG5h" value="IntlAlias" />
+    <property role="34LRSv" value="intl_alias" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="1h3k84IKhuz" role="1TKVEi">
       <property role="IQ2ns" value="1460099219963582371" />
@@ -197,7 +202,7 @@
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="conceptToLocalize" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="tpck:gw2VY9q" resolve="BaseConcept" />
+      <ref role="20lvS9" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
     </node>
   </node>
   <node concept="1TIwiD" id="1h3k84IKhut">
@@ -221,6 +226,7 @@
     <property role="EcuMT" value="1460099219963582376" />
     <property role="TrG5h" value="Translation" />
     <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="translation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="3m1ChjbUHjx" role="1TKVEi">
       <property role="IQ2ns" value="3855539866698437857" />
@@ -235,6 +241,13 @@
       <property role="20kJfa" value="strings" />
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="1h3k84IKhus" resolve="IntlAlias" />
+    </node>
+    <node concept="1TJgyj" id="7v1dfblNc8O" role="1TKVEi">
+      <property role="IQ2ns" value="8629236578592277044" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="selectedLanguage" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3m1ChjbUzTV" resolve="IntlLanguage" />
     </node>
   </node>
   <node concept="1TIwiD" id="3m1ChjbUzTV">

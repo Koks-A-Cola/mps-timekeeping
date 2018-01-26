@@ -4,7 +4,10 @@
   <languages>
     <use id="d3ca43b8-01a7-4083-ba4e-9769ab8f1643" name="Timekeeping" version="0" />
   </languages>
-  <imports />
+  <imports>
+    <import index="vbi9" ref="d3ca43b8-01a7-4083-ba4e-9769ab8f1643/i:f010101(Timekeeping/Timekeeping@descriptor)" />
+    <import index="ih4y" ref="r:069c894f-154c-4238-a338-f810181c3225(Timekeeping.structure)" implicit="true" />
+  </imports>
   <registry>
     <language id="d3ca43b8-01a7-4083-ba4e-9769ab8f1643" name="Timekeeping">
       <concept id="1460099219963582365" name="Timekeeping.structure.LocalizedKeyword" flags="ng" index="Uw$ss">
@@ -16,6 +19,7 @@
         <child id="1460099219963582371" name="keywords" index="Uw$sy" />
       </concept>
       <concept id="1460099219963582376" name="Timekeeping.structure.Translation" flags="ng" index="Uw$sD">
+        <reference id="8629236578592277044" name="selectedLanguage" index="2y3vr6" />
         <child id="1460099219963582377" name="strings" index="Uw$sC" />
         <child id="3855539866698437857" name="languages" index="3YqRnP" />
       </concept>
@@ -60,6 +64,7 @@
     </node>
   </node>
   <node concept="Uw$sD" id="1h3k84IKioU">
+    <ref role="2y3vr6" node="7v1dfblQiPI" resolve="es" />
     <node concept="3YqTXJ" id="3m1ChjbW1uZ" role="3YqRnP">
       <property role="TrG5h" value="de" />
     </node>
@@ -67,7 +72,7 @@
       <property role="TrG5h" value="en" />
     </node>
     <node concept="Uw$st" id="1h3k84IKioV" role="Uw$sC">
-      <ref role="UwBr5" node="3Ql0dP_XdMx" />
+      <ref role="UwBr5" to="ih4y:3Ql0dP_WSql" resolve="MonthlyTimeRecord" />
       <node concept="Uw$ss" id="3m1ChjbW1v4" role="Uw$sy">
         <property role="Uw$sx" value="Monat" />
         <ref role="3YrdHG" node="3m1ChjbW1uZ" resolve="de" />
@@ -80,81 +85,34 @@
         <property role="Uw$sx" value="Mesjac" />
         <ref role="3YrdHG" node="KxmSzAjdtY" resolve="ru" />
       </node>
-      <node concept="Uw$ss" id="KxmSzAkb95" role="Uw$sy">
-        <property role="Uw$sx" value="Monatli" />
-        <ref role="3YrdHG" node="KxmSzAkb94" resolve="ch" />
-      </node>
-      <node concept="Uw$ss" id="6cSWq1JqLwU" role="Uw$sy">
+      <node concept="Uw$ss" id="7v1dfblQiPJ" role="Uw$sy">
         <property role="Uw$sx" value="Los Monatos" />
-        <ref role="3YrdHG" node="6cSWq1JqLwT" resolve="es" />
-      </node>
-    </node>
-    <node concept="Uw$st" id="3yVSeSuyOFa" role="Uw$sC">
-      <ref role="UwBr5" node="3Ql0dP_XdMy" />
-      <node concept="Uw$ss" id="3m1ChjbW1va" role="Uw$sy">
-        <property role="Uw$sx" value="Tag" />
-        <ref role="3YrdHG" node="3m1ChjbW1uZ" resolve="de" />
-      </node>
-      <node concept="Uw$ss" id="3m1ChjbW1vc" role="Uw$sy">
-        <property role="Uw$sx" value="dayYy" />
-        <ref role="3YrdHG" node="3m1ChjbW1v1" resolve="en" />
-      </node>
-      <node concept="Uw$ss" id="KxmSzAjdu0" role="Uw$sy">
-        <property role="Uw$sx" value="Den" />
-        <ref role="3YrdHG" node="KxmSzAjdtY" resolve="ru" />
-      </node>
-      <node concept="Uw$ss" id="KxmSzAkb96" role="Uw$sy">
-        <property role="Uw$sx" value="Tägli" />
-        <ref role="3YrdHG" node="KxmSzAkb94" resolve="ch" />
-      </node>
-      <node concept="Uw$ss" id="6cSWq1JqLwV" role="Uw$sy">
-        <ref role="3YrdHG" node="6cSWq1JqLwT" resolve="es" />
+        <ref role="3YrdHG" node="7v1dfblQiPI" resolve="es" />
       </node>
     </node>
     <node concept="3YqTXJ" id="KxmSzAjdtY" role="3YqRnP">
       <property role="TrG5h" value="ru" />
     </node>
-    <node concept="3YqTXJ" id="KxmSzAkb94" role="3YqRnP">
-      <property role="TrG5h" value="ch" />
-    </node>
-    <node concept="Uw$st" id="KxmSzAndj_" role="Uw$sC">
-      <ref role="UwBr5" node="3CcsRtNsWTr" />
-      <node concept="Uw$ss" id="KxmSzAndjA" role="Uw$sy">
-        <property role="Uw$sx" value="Intervall" />
+    <node concept="Uw$st" id="7v1dfblOR44" role="Uw$sC">
+      <ref role="UwBr5" to="ih4y:3Ql0dP_WSrS" resolve="DailyTimeRecord" />
+      <node concept="Uw$ss" id="7v1dfblOR45" role="Uw$sy">
+        <property role="Uw$sx" value="Tag" />
         <ref role="3YrdHG" node="3m1ChjbW1uZ" resolve="de" />
       </node>
-      <node concept="Uw$ss" id="KxmSzAndjB" role="Uw$sy">
+      <node concept="Uw$ss" id="7v1dfblOR46" role="Uw$sy">
+        <property role="Uw$sx" value="dayYy" />
         <ref role="3YrdHG" node="3m1ChjbW1v1" resolve="en" />
       </node>
-      <node concept="Uw$ss" id="KxmSzAndjC" role="Uw$sy">
+      <node concept="Uw$ss" id="7v1dfblOR47" role="Uw$sy">
+        <property role="Uw$sx" value="Den" />
         <ref role="3YrdHG" node="KxmSzAjdtY" resolve="ru" />
       </node>
-      <node concept="Uw$ss" id="KxmSzAndjD" role="Uw$sy">
-        <ref role="3YrdHG" node="KxmSzAkb94" resolve="ch" />
-      </node>
-      <node concept="Uw$ss" id="6cSWq1JqLwW" role="Uw$sy">
-        <ref role="3YrdHG" node="6cSWq1JqLwT" resolve="es" />
+      <node concept="Uw$ss" id="7v1dfblQiPK" role="Uw$sy">
+        <property role="Uw$sx" value="Los Tagos" />
+        <ref role="3YrdHG" node="7v1dfblQiPI" resolve="es" />
       </node>
     </node>
-    <node concept="Uw$st" id="6cSWq1JqLww" role="Uw$sC">
-      <ref role="UwBr5" node="6cSWq1JqLww" />
-      <node concept="Uw$ss" id="6cSWq1JqLwx" role="Uw$sy">
-        <ref role="3YrdHG" node="3m1ChjbW1uZ" resolve="de" />
-      </node>
-      <node concept="Uw$ss" id="6cSWq1JqLwy" role="Uw$sy">
-        <ref role="3YrdHG" node="3m1ChjbW1v1" resolve="en" />
-      </node>
-      <node concept="Uw$ss" id="6cSWq1JqLwz" role="Uw$sy">
-        <ref role="3YrdHG" node="KxmSzAjdtY" resolve="ru" />
-      </node>
-      <node concept="Uw$ss" id="6cSWq1JqLw$" role="Uw$sy">
-        <ref role="3YrdHG" node="KxmSzAkb94" resolve="ch" />
-      </node>
-      <node concept="Uw$ss" id="6cSWq1JqLwX" role="Uw$sy">
-        <ref role="3YrdHG" node="6cSWq1JqLwT" resolve="es" />
-      </node>
-    </node>
-    <node concept="3YqTXJ" id="6cSWq1JqLwT" role="3YqRnP">
+    <node concept="3YqTXJ" id="7v1dfblQiPI" role="3YqRnP">
       <property role="TrG5h" value="es" />
     </node>
   </node>

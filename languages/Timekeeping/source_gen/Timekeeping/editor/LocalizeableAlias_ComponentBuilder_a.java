@@ -47,11 +47,11 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
         final Wrappers._T<String> aliasTemp = new Wrappers._T<String>(SConceptOperations.conceptAlias(SNodeOperations.getConcept(myNode)));
         Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(SNodeOperations.getModel(myNode), MetaAdapterFactory.getConcept(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec117a8L, "Timekeeping.structure.Translation")), MetaAdapterFactory.getContainmentLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec117a8L, 0x144350812ec117a9L, "strings"))).visitAll(new IVisitor<SNode>() {
           public void visit(SNode it) {
-            if (SNodeOperations.getConcept(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL, 0x144350812ec12644L, "conceptToLocalize"))).equals(SNodeOperations.getConcept(myNode))) {
+            if (SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL, 0x144350812ec12644L, "conceptToLocalize")) == SNodeOperations.asNode(SNodeOperations.getConcept(myNode))) {
               aliasTemp.value = "hereWeAre";
               aliasTemp.value = SPropertyOperations.getString(ListSequence.fromList(SLinkOperations.getChildren(it, MetaAdapterFactory.getContainmentLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL, 0x144350812ec117a3L, "keywords"))).findFirst(new IWhereFilter<SNode>() {
                 public boolean accept(SNode it) {
-                  return SPropertyOperations.getString(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179dL, 0x3581a114cbed7a78L, "language")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")).equals(INTL.getLanguage());
+                  return SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179dL, 0x3581a114cbed7a78L, "language")) == SLinkOperations.getTarget(ListSequence.fromList(SModelOperations.roots(SNodeOperations.getModel(myNode), MetaAdapterFactory.getConcept(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec117a8L, "Timekeeping.structure.Translation"))).first(), MetaAdapterFactory.getReferenceLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec117a8L, 0x77c134f2d5ccc234L, "selectedLanguage"));
                 }
               }), MetaAdapterFactory.getProperty(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179dL, 0x144350812ec117a0L, "keyword"));
             }
