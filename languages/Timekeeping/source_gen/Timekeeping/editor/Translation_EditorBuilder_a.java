@@ -16,7 +16,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.openapi.editor.cells.SubstituteInfo;
 import jetbrains.mps.smodel.action.SNodeFactoryOperations;
-import jetbrains.mps.internal.collections.runtime.IVisitor;
+import Timekeeping.behavior.IntlLanguage__BehaviorDescriptor;
 import jetbrains.mps.openapi.editor.cells.EditorCell_Collection;
 import jetbrains.mps.lang.editor.table.runtime.EditorCell_Table;
 
@@ -83,21 +83,11 @@ import jetbrains.mps.lang.editor.table.runtime.EditorCell_Table;
             SNodeFactoryOperations.addNewChild(myNode, MetaAdapterFactory.getContainmentLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec117a8L, 0x144350812ec117a9L, "strings"), SNodeFactoryOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL, "Timekeeping.structure.IntlAlias")));
           }
           public void deleteColumn(int columnNumber) {
-            final SNode languageToDelete = ListSequence.fromList(SLinkOperations.getChildren(myNode, MetaAdapterFactory.getContainmentLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec117a8L, 0x3581a114cbead4e1L, "languages"))).getElement(columnNumber - 1);
             if (columnNumber != 0) {
-              ListSequence.fromList(SLinkOperations.getChildren(myNode, MetaAdapterFactory.getContainmentLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec117a8L, 0x144350812ec117a9L, "strings"))).visitAll(new IVisitor<SNode>() {
-                public void visit(SNode it) {
-                  ListSequence.fromList(SLinkOperations.getChildren(it, MetaAdapterFactory.getContainmentLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179cL, 0x144350812ec117a3L, "keywords"))).visitAll(new IVisitor<SNode>() {
-                    public void visit(SNode it) {
-                      if (SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179dL, 0x3581a114cbed7a78L, "language")) == languageToDelete) {
-                        SNodeOperations.deleteNode(it);
-                      }
-                    }
-                  });
-                }
-              });
+              SNode languageToDelete = ListSequence.fromList(SLinkOperations.getChildren(myNode, MetaAdapterFactory.getContainmentLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec117a8L, 0x3581a114cbead4e1L, "languages"))).getElement(columnNumber - 1);
+              IntlLanguage__BehaviorDescriptor.customDelete_id6cSWq1JoJeE.invoke(languageToDelete, getEditorContext());
+
             }
-            SNodeOperations.deleteNode(languageToDelete);
           }
           public void insertColumn(int columnNumber) {
             SNodeFactoryOperations.addNewChild(myNode, MetaAdapterFactory.getContainmentLink(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec117a8L, 0x3581a114cbead4e1L, "languages"), SNodeFactoryOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x3581a114cbea3e7bL, "Timekeeping.structure.IntlLanguage")));

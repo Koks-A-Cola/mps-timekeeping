@@ -76,6 +76,7 @@
     <classNode dependClassName="Timekeeping.editor.DailyTimeRecord_Editor" />
     <classNode dependClassName="Timekeeping.editor.IntlAlias_Editor" />
     <classNode dependClassName="Timekeeping.editor.IntlAlias_SubstituteMenu" />
+    <classNode dependClassName="Timekeeping.editor.IntlLanguage_Editor" />
     <classNode dependClassName="Timekeeping.editor.LocalizeableAlias" />
     <classNode dependClassName="Timekeeping.editor.LocalizedKeyword_Editor" />
     <classNode dependClassName="Timekeeping.editor.LocalizedKeyword_SubstituteMenu" />
@@ -147,6 +148,32 @@
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
+  <dependency className="Timekeeping.editor.IntlLanguage_Editor" file="IntlLanguage_Editor.java">
+    <classNode dependClassName="Timekeeping.editor.IntlLanguage_EditorBuilder_a" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
+  <dependency className="Timekeeping.editor.IntlLanguage_EditorBuilder_a" file="IntlLanguage_EditorBuilder_a.java">
+    <classNode dependClassName="Timekeeping.behavior.IntlLanguage__BehaviorDescriptor" />
+    <classNode dependClassName="java.awt.event.ActionEvent" />
+    <classNode dependClassName="java.awt.event.ActionListener" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="javax.swing.JButton" />
+    <classNode dependClassName="javax.swing.JComponent" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorManager" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Component" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
   <dependency className="Timekeeping.editor.LocalizeableAlias" file="LocalizeableAlias.java">
     <classNode dependClassName="Timekeeping.editor.LocalizeableAlias_ComponentBuilder_a" />
@@ -308,8 +335,8 @@
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
   <dependency className="Timekeeping.editor.Translation_EditorBuilder_a" file="Translation_EditorBuilder_a.java">
+    <classNode dependClassName="Timekeeping.behavior.IntlLanguage__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="jetbrains.mps.lang.editor.table.runtime.EditorCell_Table" />
