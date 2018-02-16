@@ -17,6 +17,8 @@ import java.awt.Color;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
 import jetbrains.mps.editor.runtime.style.Padding;
 import jetbrains.mps.editor.runtime.style.Measure;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
@@ -24,7 +26,6 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import jetbrains.mps.smodel.action.NodeFactoryManager;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
 import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
@@ -61,6 +62,7 @@ import jetbrains.mps.editor.runtime.EditorCell_Empty;
     style.set(StyleAttributes.BACKGROUND_COLOR, StyleRegistry.getInstance().getSimpleColor(new Color(14540253)));
     editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createCollection_6ww6yi_a0());
+    editorCell.addEditorCell(createComponent_6ww6yi_b0());
     return editorCell;
   }
   private EditorCell createCollection_6ww6yi_a0() {
@@ -75,9 +77,14 @@ import jetbrains.mps.editor.runtime.EditorCell_Empty;
     editorCell.addEditorCell(createComponent_6ww6yi_a0a());
     editorCell.addEditorCell(createProperty_6ww6yi_b0a());
     editorCell.addEditorCell(createConstant_6ww6yi_c0a());
-    editorCell.addEditorCell(createCollection_6ww6yi_d0a());
+    if (nodeCondition_6ww6yi_a3a0()) {
+      editorCell.addEditorCell(createCollection_6ww6yi_d0a());
+    }
     editorCell.addEditorCell(createEmpty_6ww6yi_e0a());
     return editorCell;
+  }
+  private boolean nodeCondition_6ww6yi_a3a0() {
+    return SPropertyOperations.getBoolean(myNode, MetaAdapterFactory.getProperty(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x133bf0310e6e97L, 0x133bf0310e6e98L, "expanded"));
   }
   private EditorCell createComponent_6ww6yi_a0a() {
     EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "Timekeeping.editor.LocalizeableAlias");
@@ -183,6 +190,10 @@ import jetbrains.mps.editor.runtime.EditorCell_Empty;
     editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.FORWARD));
     editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.BACKWARD));
     editorCell.setCellId("Empty_6ww6yi_e0a");
+    return editorCell;
+  }
+  private EditorCell createComponent_6ww6yi_b0() {
+    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "Timekeeping.editor.ToggleButton");
     return editorCell;
   }
 }

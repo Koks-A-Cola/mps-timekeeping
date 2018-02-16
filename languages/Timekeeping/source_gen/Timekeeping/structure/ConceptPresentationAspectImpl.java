@@ -10,6 +10,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_DailyTimeRecord;
+  private ConceptPresentation props_IToggleableEditor;
   private ConceptPresentation props_IntlAlias;
   private ConceptPresentation props_IntlLanguage;
   private ConceptPresentation props_LocalizedKeyword;
@@ -29,6 +30,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DailyTimeRecord = cpb.create();
         }
         return props_DailyTimeRecord;
+      case LanguageConceptSwitch.IToggleableEditor:
+        if (props_IToggleableEditor == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IToggleableEditor = cpb.create();
+        }
+        return props_IToggleableEditor;
       case LanguageConceptSwitch.IntlAlias:
         if (props_IntlAlias == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

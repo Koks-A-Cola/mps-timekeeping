@@ -10,6 +10,9 @@
   </imports>
   <registry>
     <language id="d3ca43b8-01a7-4083-ba4e-9769ab8f1643" name="Timekeeping">
+      <concept id="5413927358721687" name="Timekeeping.structure.IToggleableEditor" flags="ng" index="L7llB">
+        <property id="5413927358721688" name="expanded" index="L7llC" />
+      </concept>
       <concept id="1460099219963582365" name="Timekeeping.structure.LocalizedKeyword" flags="ng" index="Uw$ss">
         <property id="1460099219963582368" name="keyword" index="Uw$sx" />
         <reference id="3855539866698611320" name="language" index="3YrdHG" />
@@ -48,6 +51,7 @@
     <property role="1opCoC" value="2017" />
     <node concept="1opCo_" id="3Ql0dP_XdMy" role="1opCoy">
       <property role="1opCoA" value="17" />
+      <property role="L7llC" value="true" />
       <node concept="1opCvs" id="3CcsRtNsWTr" role="1opCvu">
         <property role="1opCvx" value="blablabla" />
         <property role="1opCvE" value="foo" />
@@ -59,12 +63,13 @@
     </node>
     <node concept="1opCo_" id="3JNW8yYehPL" role="1opCoy">
       <property role="1opCoA" value="18" />
+      <property role="L7llC" value="true" />
       <node concept="1opCvs" id="3JNW8yYehPS" role="1opCvu" />
       <node concept="1opCvs" id="3JNW8yYehPU" role="1opCvu" />
     </node>
   </node>
   <node concept="Uw$sD" id="1h3k84IKioU">
-    <ref role="2y3vr6" node="7v1dfblQiPI" resolve="es" />
+    <ref role="2y3vr6" node="3m1ChjbW1uZ" resolve="de" />
     <node concept="3YqTXJ" id="3m1ChjbW1uZ" role="3YqRnP">
       <property role="TrG5h" value="de" />
     </node>

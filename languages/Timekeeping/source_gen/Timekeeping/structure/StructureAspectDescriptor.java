@@ -13,6 +13,7 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDailyTimeRecord = createDescriptorForDailyTimeRecord();
+  /*package*/ final ConceptDescriptor myConceptIToggleableEditor = createDescriptorForIToggleableEditor();
   /*package*/ final ConceptDescriptor myConceptIntlAlias = createDescriptorForIntlAlias();
   /*package*/ final ConceptDescriptor myConceptIntlLanguage = createDescriptorForIntlLanguage();
   /*package*/ final ConceptDescriptor myConceptLocalizedKeyword = createDescriptorForLocalizedKeyword();
@@ -27,7 +28,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptDailyTimeRecord, myConceptIntlAlias, myConceptIntlLanguage, myConceptLocalizedKeyword, myConceptMonthlyTimeRecord, myConceptTranslation, myConceptWorkInterval);
+    return Arrays.asList(myConceptDailyTimeRecord, myConceptIToggleableEditor, myConceptIntlAlias, myConceptIntlLanguage, myConceptLocalizedKeyword, myConceptMonthlyTimeRecord, myConceptTranslation, myConceptWorkInterval);
   }
 
   @Override
@@ -36,6 +37,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myConceptIndex.index(id)) {
       case LanguageConceptSwitch.DailyTimeRecord:
         return myConceptDailyTimeRecord;
+      case LanguageConceptSwitch.IToggleableEditor:
+        return myConceptIToggleableEditor;
       case LanguageConceptSwitch.IntlAlias:
         return myConceptIntlAlias;
       case LanguageConceptSwitch.IntlLanguage:
@@ -61,10 +64,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Timekeeping", "DailyTimeRecord", 0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x3d9500dd65f386f8L);
     b.class_(false, false, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x133bf0310e6e97L);
     b.origin("r:069c894f-154c-4238-a338-f810181c3225(Timekeeping.structure)/4437453958741722872");
     b.prop("day", 0x3d9500dd65f386fbL, "4437453958741722875");
     b.aggregate("intervals", 0x3d9500dd65f38703L).target(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x3d9500dd65f38701L).optional(true).ordered(true).multiple(true).origin("4437453958741722883").done();
     b.alias("day");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForIToggleableEditor() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Timekeeping", "IToggleableEditor", 0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x133bf0310e6e97L);
+    b.interface_();
+    b.origin("r:069c894f-154c-4238-a338-f810181c3225(Timekeeping.structure)/5413927358721687");
+    b.prop("expanded", 0x133bf0310e6e98L, "5413927358721688");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIntlAlias() {
