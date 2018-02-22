@@ -10,12 +10,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_DailyTimeRecord;
-  private ConceptPresentation props_IToggleableEditor;
-  private ConceptPresentation props_IntlAlias;
-  private ConceptPresentation props_IntlLanguage;
-  private ConceptPresentation props_LocalizedKeyword;
   private ConceptPresentation props_MonthlyTimeRecord;
-  private ConceptPresentation props_Translation;
   private ConceptPresentation props_WorkInterval;
 
   @Override
@@ -30,33 +25,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DailyTimeRecord = cpb.create();
         }
         return props_DailyTimeRecord;
-      case LanguageConceptSwitch.IToggleableEditor:
-        if (props_IToggleableEditor == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_IToggleableEditor = cpb.create();
-        }
-        return props_IToggleableEditor;
-      case LanguageConceptSwitch.IntlAlias:
-        if (props_IntlAlias == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("intl_alias");
-          props_IntlAlias = cpb.create();
-        }
-        return props_IntlAlias;
-      case LanguageConceptSwitch.IntlLanguage:
-        if (props_IntlLanguage == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_IntlLanguage = cpb.create();
-        }
-        return props_IntlLanguage;
-      case LanguageConceptSwitch.LocalizedKeyword:
-        if (props_LocalizedKeyword == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x144350812ec1179dL, 0x3581a114cbed7a78L, "language", "", "");
-          props_LocalizedKeyword = cpb.create();
-        }
-        return props_LocalizedKeyword;
       case LanguageConceptSwitch.MonthlyTimeRecord:
         if (props_MonthlyTimeRecord == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -64,13 +32,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_MonthlyTimeRecord = cpb.create();
         }
         return props_MonthlyTimeRecord;
-      case LanguageConceptSwitch.Translation:
-        if (props_Translation == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("translation");
-          props_Translation = cpb.create();
-        }
-        return props_Translation;
       case LanguageConceptSwitch.WorkInterval:
         if (props_WorkInterval == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

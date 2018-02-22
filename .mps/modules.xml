@@ -3,7 +3,7 @@
   <component name="MPSProject">
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/Timekeeping/Timekeeping.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/TestSolution/TestSolution.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/NewSolution3/NewSolution3.msd" folder="" />
     </projectModules>
   </component>
 </project>

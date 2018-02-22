@@ -76,15 +76,8 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     return editorCell;
   }
   private EditorCell createComponent_9cytfk_a0a0() {
-    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "Timekeeping.editor.LocalizeableAlias");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
-    style.set(StyleAttributes.FONT_SIZE, _StyleParameter_QueryFunction_9cytfk_a1a0a0());
-    editorCell.getStyle().putAll(style);
+    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "mpstools.editor.LocalizeableAlias");
     return editorCell;
-  }
-  private int _StyleParameter_QueryFunction_9cytfk_a1a0a0() {
-    return FSS.large();
   }
   private EditorCell createProperty_9cytfk_b0a0() {
     CellProviderWithRole provider = new PropertyCellProvider(myNode, getEditorContext());

@@ -84,17 +84,11 @@ import jetbrains.mps.editor.runtime.EditorCell_Empty;
     return editorCell;
   }
   private boolean nodeCondition_6ww6yi_a3a0() {
-    return SPropertyOperations.getBoolean(myNode, MetaAdapterFactory.getProperty(0xd3ca43b801a74083L, 0xba4e9769ab8f1643L, 0x133bf0310e6e97L, 0x133bf0310e6e98L, "expanded"));
+    return SPropertyOperations.getBoolean(myNode, MetaAdapterFactory.getProperty(0x69a000cb56db442fL, 0xa085a182111bac09L, 0x133bf0310e6e97L, 0x133bf0310e6e98L, "expanded"));
   }
   private EditorCell createComponent_6ww6yi_a0a() {
-    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "Timekeeping.editor.LocalizeableAlias");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.FONT_SIZE, _StyleParameter_QueryFunction_6ww6yi_a0a0a());
-    editorCell.getStyle().putAll(style);
+    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "mpstools.editor.LocalizeableAlias");
     return editorCell;
-  }
-  private int _StyleParameter_QueryFunction_6ww6yi_a0a0a() {
-    return FSS.medium_large();
   }
   private EditorCell createProperty_6ww6yi_b0a() {
     CellProviderWithRole provider = new PropertyCellProvider(myNode, getEditorContext());
@@ -193,7 +187,7 @@ import jetbrains.mps.editor.runtime.EditorCell_Empty;
     return editorCell;
   }
   private EditorCell createComponent_6ww6yi_b0() {
-    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "Timekeeping.editor.ToggleButton");
+    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "mpstools.editor.ToggleButton");
     return editorCell;
   }
 }
